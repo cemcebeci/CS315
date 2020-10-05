@@ -1,0 +1,27 @@
+<body>
+    <script>
+        for( var i = 0; i < 3; i++){
+            document.writeln(i);
+        }                           //standard integer counter
+
+        var objectArray = [ { color : "green", name : "apple"}, { color : "orange", name : "orange"}];
+        for( var o of objectArray){
+            document.writeln(o.color);
+        }                           //the loop control variable can be an arbitrary type, even an object.
+    
+        document.writeln(i);        //Works fine, the scope is the scope of the loop.
+
+        for(var j = 0; j < 10; j++){
+            j += 5;
+            document.writeln(j);
+        }                           //loop control variable can be changed inside the loop and it affects the control.
+
+        var initial_value = 0;
+        var final_value = 15;
+        var step_size = 1;
+        for (var counter = initial_value; counter <= final_value; counter += step_size){
+            document.writeln(counter);
+            step_size++;
+        }
+    </script>
+</body>

@@ -1,0 +1,13 @@
+MAIN()
+{
+	A ; B; C;
+	A = {2,4,6,8};
+	B = {2,{4,{8}}};
+	C = A*B;//C will be equal to {2} since {4,8} and {{4,{8}}} are different subsets;
+	output C;
+	
+	if A << 4 {
+		input D;
+	};
+}
+

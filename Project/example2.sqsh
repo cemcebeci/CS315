@@ -1,0 +1,25 @@
+MAIN() {
+	input A;
+	B;
+
+	B = PROGRAM(A);
+	delete A;
+	output B;
+}
+
+PROGRAM(X){
+//The function returns the intersection of X and {1,2,3,4,5};
+	Y;
+	O;
+	O = {};
+	Y = { 1,2,3,4,5};
+	Y : 1 -> Z
+	{
+		if ( Z <= X)
+		{
+			O = O + Z; //”+” is the union operator
+		};	
+	};
+	return O;
+}
+

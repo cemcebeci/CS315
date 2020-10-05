@@ -1,0 +1,48 @@
+<body>
+    <script>
+        var array = [1,2,3,4];           //Initialization allowed.
+        document.write(array[1] + "<br>");
+
+        //document.write(array["a"]);    //Error
+        document.write(array[1.5] + "<br>");      //writes "undefined"
+        document.write(array[4] + "<br>");        //writes "undefined", no range check
+        document.write(array[-1] + "<br>");       //writes "undefined"
+
+        //var assoc = ["Cem" : "21703377"]; //Syntax error, associative arrays are not supported
+
+        array.push(5);
+        document.write(array[4] + "<br>");        //Arrays have dynamic size.
+
+        var ragged = [[1,2],[3,4]];
+        ragged.push([5,6,7]);
+        document.write(ragged[1] + "<br>");
+        document.write(ragged[2] + "<br>");         //Ragged arrays are allowed.
+
+        var max = 5;
+        for( var i = 0; i < 1000; i++) {
+            max = [max];
+        }
+        document.write(max + "<br>");               //No subscript limitation.
+
+        array = [1,2,3,4,5];
+        document.write(array.slice(1,4) + "<br>");  //Slicing supported.
+
+        var concated = [1,2,3] + array;
+        document.write(concated + "<br>");          //Does not work as expected.
+
+        var a1 = [1,2];
+        var a2 = [1,2];
+        document.write((a1 == a2) + "<br>");                   //== operator compares references.
+
+        var array1 = [2,5,9,3,1,4];
+        array1.sort();
+        document.write(array1 + "<br>");
+        array1.reverse();
+        document.write(array1 + "<br>");
+        array1.shift();
+        document.write(array1 + "<br>");
+        array1.pop();
+        document.write(array1 + "<br>");
+        document.write(array1.concat([11,12,13])); //some array functions.
+    </script>
+</body>
